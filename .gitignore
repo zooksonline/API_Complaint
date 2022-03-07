@@ -1,0 +1,4 @@
+node_modules
+/middleware
+/config
+/uploads

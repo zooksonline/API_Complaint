@@ -1,0 +1,44 @@
+{
+  "name": "e-complaint",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "ondev": "NODE_ENV=dev PORT=6002 nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\" ",
+    "production": "concurrently \"npm run start\" \"serve -s client/build -l 4000\" "
+  },
+  "author": "Pariwat Prathanrat",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.2.0",
+    "config": "^3.3.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.7-alpha.3",
+    "fs": "0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "ldap-authentication": "^2.1.3",
+    "ldapts": "^2.2.1",
+    "mongoose": "^5.12.13",
+    "passport": "^0.4.1",
+    "passport-ldapauth": "^2.1.4"
+  },
+  "devDependencies": {
+    "@types/config": "0.0.36",
+    "@types/jsonwebtoken": "^8.3.9",
+    "dotenv": "^8.2.0",
+    "eslint-plugin-react-hooks": "^2.5.1",
+    "nodemon": "^2.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://pariwatpr@dev.azure.com/pariwatpr/API_E-Complaint/_git/API_E-Complaint"
+  },
+  "description": ""
+}
